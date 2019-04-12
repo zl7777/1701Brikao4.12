@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        body.html {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .wrap {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            width: 100%;
+            padding-top: 100px;
+        }
+        
+        .header ul {
+            display: flex;
+        }
+        
+        .header ul li {
+            width: 25%;
+            height: 44px;
+            line-height: 44px;
+            text-align: center;
+            border: 1px solid #000;
+            margin: 2px;
+        }
+        
+        .footer {
+            position: fixed;
+            left: 22%;
+            bottom: 20px;
+        }
+        
+        .footer button {
+            width: 200px;
+            height: 44px;
+            background: #999;
+            color: #fff;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <ul>
+                <li onclick="red()">电源</li>
+                <li onclick="blue()">首页</li>
+                <li onclick="green()">菜单</li>
+                <li onclick="pink()">截屏</li>
+            </ul>
+        </div>
+        <div class="footer">
+            <button>返回</button>
+        </div>
+    </div>
+</body>
+<script>
+    let lis = document.querySelectorAll('li');
+
+    lis.forEach(item => {
+        if (item.style === this) {
+            item.style = red;
+        }
+    })
+</script>
+
+</html>
